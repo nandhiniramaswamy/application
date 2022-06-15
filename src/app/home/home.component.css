@@ -11,7 +11,7 @@
   .mat-toolbar-row {
     font-size: 25px;
     background-color: #3385ff;
-    
+
 }
 
 .spacer {
@@ -42,8 +42,8 @@ a:active{
 }
 .container{
     background-color: white;
-  
-   
+
+
 }
 ul{
 background-color: white;
@@ -54,7 +54,7 @@ i{
 }
 input{
     size: 50px;
-    
+
 }
 h2{
     font-size: 25px;
@@ -72,7 +72,7 @@ color: red;
     width: 100%;
     margin:auto;
     background: #fff;
-    padding: 20px;	
+    padding: 20px;
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
 }
 .table-title {
@@ -115,7 +115,7 @@ table.table td a {
     display: inline-block;
     margin: 0 5px;
     min-width: 24px;
-}    
+}
 table.table td a.add {
     color: #27C46B;
 }
@@ -133,7 +133,7 @@ table.table td a.add i {
     margin-right: -1px;
     position: relative;
     top: 3px;
-}    
+}
 table.table .form-control {
     height: 32px;
     line-height: 32px;

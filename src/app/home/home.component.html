@@ -1,0 +1,239 @@
+<div class="container">
+
+
+    <h3><i class="bi bi-person-fill"></i>Basic Information</h3>
+
+
+    <form [formGroup]="loginForm" >
+        <div class="row">
+          <div class="col-md-5">
+
+            &nbsp;<label for="firstname"><b>First Name</b></label><br>
+            <input type="text" class="form-control" placeholder="Enter your first name" formControlName="first">
+            <span appearance="outline" class="error" *ngIf="!loginForm.controls['first'].valid && (loginForm.controls['first']?.touched || loginForm.controls['first']?.dirty)" > Required
+
+            </span>
+
+          </div>
+
+          <div class="col-md-5">
+            &nbsp;<label for="lastname"><b>Last Name</b></label>
+            <input type="text" class="form-control" placeholder="Enter your last name" formControlName="last">
+            <span class="error" *ngIf="!loginForm.controls['last'].valid && (loginForm.controls['last']?.touched || loginForm.controls['last']?.dirty)" > Required
+          </span>
+            </div>
+
+          <div class="col-md-5"><br>
+            &nbsp;<label for="date"><b>Date of Birth</b></label><br>
+            <input type ="date" min="{{minDate}}" class="form-control" placeholder="Enter Date of Birth" formControlName="date">
+
+          </div>
+
+
+          <div class="col-md-5"><br>
+            &nbsp;<label for="gender"><b>Gender</b></label><br>
+
+         <label for="male" class="radio-inline"><input type="radio" name="gender" id="male">    <b>      Male</b></label> &nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="female" class="radio-inline"><input type="radio" name="gender" id="female">    <b>     Female</b></label>&nbsp;&nbsp;&nbsp;&nbsp;
+              <label for="other" class="radio-inline"><input type="radio" name="gender" id="other">    <b>     Other</b></label>&nbsp;&nbsp;&nbsp;&nbsp;<br><br><br>
+
+          </div>
+
+          <div class="col-md-5">
+            &nbsp;<label for="Position"><b>Position applied for</b></label>
+            <input type="text" class="form-control" placeholder="Select a Designation" formControlName="Position">
+            <span class="error" *ngIf="!loginForm.controls['Position'].valid && (loginForm.controls['Position']?.touched || loginForm.controls['Position']?.dirty)" > Required
+            </span>
+          </div>
+
+          <div class="col-md-5">
+            &nbsp;<label for="Employee"><b>Employee Reference (if any)</b></label>
+            <input type="text" class="form-control" placeholder="Employee Reference" formControlName="employee">
+            <span class="error" *ngIf="!loginForm.controls['employee'].valid && (loginForm.controls['employee']?.touched || loginForm.controls['employee']?.dirty)" > Required
+            </span>
+            <br> <br></div>
+
+<hr>
+<h3><i class="bi bi-house-fill"></i>Contact</h3>
+
+<div class="col-md-4">
+&nbsp;<label for="Mobile"><b>Mobile Number</b></label>
+<input type="text" class="form-control" placeholder="Mobile Number" formControlName="Mobile">
+<span class="error" *ngIf="!loginForm.controls['Mobile'].valid && (loginForm.controls['Mobile']?.touched || loginForm.controls['Mobile']?.dirty)" > Required
+</span>
+</div>
+
+<div class="col-md-3">
+&nbsp;<label for="Home"><b>Home Phone Number</b></label>
+<input type="text" class="form-control" placeholder="Home Phone Number" formControlName="Home">
+<span class="error" *ngIf="!loginForm.controls['Home'].valid && (loginForm.controls['Home']?.touched || loginForm.controls['Home']?.dirty)" > Required
+</span>
+</div>
+<div class="col-md-3">
+&nbsp;<label for="Office"><b>Office Number</b></label>
+<input type="text" class="form-control" placeholder="Office Phone Number" formControlName="Office">
+<span class="error" *ngIf="!loginForm.controls['Office'].valid && (loginForm.controls['Office']?.touched || loginForm.controls['Office']?.dirty)" > Required
+</span>
+</div><br><br><br><br>
+
+<div class="col-md-5">
+&nbsp;<label for="Email"><b>Personal Email ID</b></label>
+<input type="text" class="form-control" placeholder="Personal Email ID" formControlName="Email">
+<span class="error" *ngIf="!loginForm.controls['Email'].valid && (loginForm.controls['Email']?.touched || loginForm.controls['Email']?.dirty)" > Required
+  </span>
+</div><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+
+<br><br>
+
+<div class="col-md-5">
+&nbsp;<label for="Presentaddress"><b>Present Address</b></label>
+<input type="text" class="form-control" placeholder="Present Address" style=" padding:30px; text-align: left ; " formControlName="Presentaddress">
+<span class="error" *ngIf="!loginForm.controls['Presentaddress'].valid && (loginForm.controls['Presentaddress']?.touched || loginForm.controls['Presentaddress']?.dirty)" > Required
+</span>
+</div>
+
+<br><br><br><br>
+
+<div class="col-md-5">
+&nbsp;<label for="Locality"><b>Locality</b></label>
+<input type="text" class="form-control" placeholder="Locality" formControlName="Locality">
+<span class="error" *ngIf="!loginForm.controls['Locality'].valid && (loginForm.controls['Locality']?.touched || loginForm.controls['Locality']?.dirty)" > Required
+</span>
+</div>
+
+<div class="col-md-5">
+<br> &nbsp;<label for="City"><b>City</b></label>
+<input type="text" class="form-control" placeholder="City" formControlName="City">
+<span class="error" *ngIf="!loginForm.controls['City'].valid && (loginForm.controls['City']?.touched || loginForm.controls['City']?.dirty)" > Required
+</span>
+</div>
+
+<div class="col-md-5">
+<br> &nbsp;<label for="Pincode"><b>Pincode</b></label>
+<input type="text" class="form-control" placeholder="Pincode" style="border: 5 px solid red;" formControlName="Pincode">
+<span class="error" *ngIf="!loginForm.controls['Pincode'].valid && (loginForm.controls['Pincode']?.touched || loginForm.controls['Pincode']?.dirty)" > Required
+</span>
+</div>
+
+<div class="col-md-5">
+<br>&nbsp;<label for="District"><b>District</b></label>
+<input type="text" class="form-control" placeholder="Distric"  formControlName="District">
+<span class="error" *ngIf="!loginForm.controls['District'].valid && (loginForm.controls['District']?.touched || loginForm.controls['District']?.dirty)" > Required
+</span>
+<br>
+</div>
+
+<div class="col-md-5">
+<br> &nbsp;<label for="State"><b>State</b></label>
+<input type="text" class="form-control" placeholder="State" formControlName="State">
+<span class="error" *ngIf="!loginForm.controls['State'].valid && (loginForm.controls['State']?.touched || loginForm.controls['State']?.dirty)" > Required
+</span>
+</div>
+
+<div class="col-md-5">
+&nbsp;<label for="Country"><b>Country</b></label>
+<input type="text" class="form-control" placeholder="Country" formControlName="Country">
+<span class="error" *ngIf="!loginForm.controls['Country'].valid && (loginForm.controls['Country']?.touched || loginForm.controls['Country']?.dirty)" > Required
+</span>
+</div>
+
+<div class="col-md-5">
+&nbsp; <label for="Landmark"><b>Landmark</b></label>
+<input type="text" class="form-control" placeholder="Landmark" formControlName="Landmark">
+<span class="error" *ngIf="!loginForm.controls['Landmark'].valid && (loginForm.controls['Landmark']?.touched || loginForm.controls['Landmark']?.dirty)" > Required
+</span>
+</div>
+
+<div class="col-md-5">
+<br>  &nbsp;<label for="passport"><b>Do you have a passport?</b></label><br><br>
+<label for="yes" class="radio-inline"><input type="radio" formControlName="passport" id="male">    <b>      Yes</b></label> &nbsp;&nbsp;&nbsp;&nbsp;
+<label for="no" class="radio-inline"><input type="radio" name="passport" id="no">    <b>     No</b></label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+</div>
+
+<div class="col-md-5">
+<br>&nbsp;<label for="passport"><b>Do you have a visa?</b></label><br><br>
+<label for="yes" class="radio-inline"><input type="radio" name="passport" id="male">    <b>      Yes</b></label> &nbsp;&nbsp;&nbsp;&nbsp;
+<label for="no" class="radio-inline"><input type="radio" name="passport" id="no">    <b>     No</b></label>&nbsp;&nbsp;&nbsp;&nbsp;
+<br><br>
+</div>
+
+<hr><br><br>
+<h3><i class="fa fa-users" aria-hidden="true" style="color: black;"></i>  Family Details</h3>
+
+<div class="col-md-6">
+&nbsp;<label for="passport"><b>Marital Status</b></label><br><br>
+<label for="yes" class="radio-inline"><input type="radio" name="passport" id="male">    <b>      Single</b></label> &nbsp;&nbsp;&nbsp;&nbsp;
+<label for="no" class="radio-inline"><input type="radio" name="passport" id="no">    <b>     Married</b></label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<label for="yes" class="radio-inline"><input type="radio" name="passport" id="male">    <b>      Divorced</b></label> &nbsp;&nbsp;&nbsp;&nbsp;
+<label for="no" class="radio-inline"><input type="radio" name="passport" id="no">    <b>     Widowed</b></label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<label for="yes" class="radio-inline"><input type="radio" name="passport" id="male">    <b>      Separated</b></label> &nbsp;&nbsp;&nbsp;&nbsp;
+<label for="no" class="radio-inline"><input type="radio" name="passport" id="no">    <b>     Other</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<br><br>
+</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+
+<br><br>
+
+<app-login></app-login>
+
+
+
+<div class="table-wrapper" class="col-md-10">
+<div class="table-title">
+  <div class="row">
+      <div class="col-sm-8"><h4><b>Language Proficiency</b></h4></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="col-md-1">
+          <button type="button" class="btn btn-primary" style="color: white; background-color: blue; font-size: 15px; text-align: center; padding-inline-end: 8px">Add </button>
+
+        </div>
+  </div>
+</div>
+<table class="table table-bordered" >
+  <thead style="background-color: #e6e6ff;">
+      <tr>
+          <th>Language</th>
+         <th>Can Speak</th>
+          <th>Can Read </th>
+        <th>Can Write</th>
+          <th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><input class="form-select" type="text" class="form-control" name="Employee" placeholder="--Select--"><br><span class="error">Select known Language from list Language Proficiency is Required</span></td>
+         <td><div class="form-check">
+       <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          </div></td>
+
+
+          <td><div class="form-check">
+            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+               </div></td>
+               <td><div class="form-check">
+                <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                   </div></td>
+
+          <td>
+
+            <button type="button" class="btn btn-primary" style="background-color: #009900; font-size: 8px; padding-inline-end: 8px;"><i class="bi bi-pencil-fill" style="color: white; font-size: 15px; text-align: center;"></i></button>&nbsp;
+            <button type="button" class="btn btn-primary" style="background-color: #e60000; font-size: 10px; padding-inline-end: 10px;"><i class="bi bi-trash" style="color: white; font-size: 15px; text-align: center;"></i></button>
+
+          </td>
+      </tr>
+
+
+  </tbody>
+</table>
+</div>
+
+<hr>
+</div>
+</form>
+</div>

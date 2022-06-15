@@ -1,0 +1,92 @@
+<div class="table-wrapper" class="col-md-10 mt-3">
+  <div class="table-title">
+    <div class="row">
+
+      <div class="col-sm-8"><h4><b>Family Members</b></h4></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="col-md-1">
+          <a routerLink="list" class="btn btn-primary" id="addbtn" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: white; background-color: blue; font-size: 15px; text-align: center; padding-inline-end: 8px">Add </a>
+        </div>
+  </div>
+  </div>
+
+  <table class="table table-bordered" id="database" role="grid">
+    <thead style="background-color: #e6e6ff;">
+        <tr>
+          <th scope="col">S.no</th>
+            <th scope="col">Name</th>
+           <th scope="col">Relationship</th>
+            <th scope="col">Age</th>
+          <th scope="col">Occupation/Organization</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody  >
+        <tr *ngFor="let row of employeeData">
+          <td>{{row.id}}</td>
+            <td>{{row.name}}</td>
+           <td>{{row.relationship}}</td>
+          <td>{{row.age}}</td>
+          <td>{{row.occupation}}</td>
+
+            <td>
+
+              <button (click)="onEdit(row)" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary" style="background-color: #009900; font-size: 15px; padding-inline-end: 8px;">Edit</button>&nbsp;
+              <button (click)="deleteEmployee(row)" type="button" class="btn btn-primary" style="background-color: #e60000; font-size: 15px; padding-inline-end: 10px;">Delete</button>
+
+            </td>
+        </tr>
+
+
+    </tbody>
+  </table>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Family Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <form [formGroup]="formValue">
+
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input type="text" formControlName="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Relationship</label>
+            <input type="text" formControlName="relationship" class="form-control" id="exampleInputPassword1">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Age</label>
+            <input type="text" formControlName="age" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Occupation</label>
+            <input type="text" formControlName="occupation" class="form-control" id="exampleInputPassword1">
+          </div>
+
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" (click)="postEmployeeDetails()" class="btn btn-primary">Add</button>
+        <button type="button" (click)="updateEmployeeDetails()" class="btn btn-primary">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+  <br><br><hr><br><br>
